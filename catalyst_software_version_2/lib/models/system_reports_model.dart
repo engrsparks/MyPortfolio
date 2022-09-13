@@ -1,0 +1,28 @@
+import 'package:flutter/foundation.dart';
+import 'package:hive/hive.dart';
+import 'hive_boxes.dart';
+
+part 'system_reports_model.g.dart';
+
+@HiveType(typeId: 7)
+class SystemReportsModel {
+  @HiveField(58)
+  final String description;
+
+  @HiveField(59)
+  final DateTime dateTime;
+
+  SystemReportsModel({required this.description, required this.dateTime});
+}
+
+class SystemReportsModelProvider with ChangeNotifier {
+  List<SystemReportsModel> systemReports = [];
+
+  void addReport(String desc) {
+    final _inventoryReports =
+        SystemReportsModel(description: desc, dateTime: DateTime.now());
+    systemReports.add(_inventoryReports);
+    HiveBoxes.getSystemReportsData().add(_inventoryReports);
+    notifyListeners();
+  }
+}
