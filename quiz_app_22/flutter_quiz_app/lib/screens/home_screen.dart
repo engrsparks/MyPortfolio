@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
               drawerToggleButton(),
               Column(
                 children: [
-                  headerText("Quiz App"),
+                  headerText("Brilliance Edge"),
                   SizedBox(height: 30),
                   ...homeScreenButtons(context),
                 ],
@@ -62,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: const [
                 Text(
-                  "Quiz App",
+                  "Brilliance Edge",
                   style: TextStyle(color: Colors.white, fontSize: 32),
                 ),
                 Text(
