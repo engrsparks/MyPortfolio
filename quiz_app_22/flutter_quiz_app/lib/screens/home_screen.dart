@@ -142,7 +142,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Text(
       text,
       style: TextStyle(
-          fontSize: 72,
+          fontSize: 55,
           color: ThemeHelper.accentColor,
           fontWeight: FontWeight.bold,
           shadows: [Shadow(color: ThemeHelper.shadowColor, offset: Offset(-5, 5), blurRadius: 30)]),
